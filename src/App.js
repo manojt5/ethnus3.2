@@ -26,7 +26,6 @@ function App() {
 
       return (
             <div className="container">
-                  <h1>Calculator App using react</h1>
                   <div className="caculator">
                         <input type="text" value={input} className="output" readOnly />
                         <Keypad handleClick={handleClick} handleClear={handleClear} calculate={calculate}></Keypad>

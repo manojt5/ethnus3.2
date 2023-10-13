@@ -7,26 +7,29 @@ function App() {
 
 
       let [input, setInput] = useState("")
+      let [input1, setInput1] = useState("")
       function handleClick(value) {
 
             setInput(input + value)
 
       }
       function calculate(value) {
-
+            setInput1(input);
             let outputVal = eval(input)
-            setInput(outputVal)
+            setInput(outputVal);
 
       }
       function handleClear() {
 
-            setInput("")
+            setInput("");
+            setInput1("");
 
       }
 
       return (
             <div className="container">
-                  <div className="caculator">
+                  <div className="calculator">
+                        <input type="text" value={input1} className="output1" readOnly />
                         <input type="text" value={input} className="output" readOnly />
                         <Keypad handleClick={handleClick} handleClear={handleClear} calculate={calculate}></Keypad>
 
